@@ -77,7 +77,16 @@ GET /math/division/9/3
 3.0
 ```
 
-**Error Handling:** If `numberTwo` is `0`, the API throws an error: `"Division by zero"`.
+**Error Handling:** If `numberOne` or `numberTwo` is `0`, the API throws an error: `"Division by zero"`.
+
+**Example Erro:**
+```json
+{
+    "timestamp": "2025-03-23T04:01:46.346+00:00",
+    "message": "Division by zero",
+    "details": "uri=/math/division/0/2"
+}
+```
 
 ---
 
@@ -118,7 +127,11 @@ GET /math/squareRoot/25
 ## Error Handling
 The API validates input values to ensure they are numeric. If a non-numeric value is provided, it throws an error:
 ```json
-{"error": "Number is not numeric"}
+{
+    "timestamp": "2025-03-23T04:01:03.925+00:00",
+    "message": "For input string: \"a\"",
+    "details": "uri=/math/sum/6/a"
+}
 ```
 
 ## Setup & Running the Application
